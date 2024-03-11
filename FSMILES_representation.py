@@ -2,7 +2,6 @@ from rdkit import Chem
 from rdkit.Chem import rdmolops
 from rdkit.Chem import rdmolfiles
 import networkx as nx
-import matplotlib.pyplot as plt
 from rdkit.Chem.Draw import rdMolDraw2D
 from IPython.display import SVG
 import re
