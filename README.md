@@ -1,10 +1,10 @@
-Introduction:
+Introduction:---------------------------------------------------------
 
 This Python script reads 3D molecular structures either from local SDF files or directly via PubChem CID, and give its FSMILES representation.
+----------------------------------------------------------------------
 
 
-
-Dependencies:
+Dependencies:---------------------------------------------------------
 
 To use this tool, you'll need to install several Python packages related to cheminformatics and graph operations. 
 Ensure you have Python 3.x installed on your system before proceeding. The required packages are:
@@ -16,10 +16,10 @@ Requests-cache: A transparent persistent cache for the Requests library.
 
 You can install these dependencies using pip  by running the following commands in your terminal:
   pip install rdkit networkx matplotlib requests requests-cache
-  
+----------------------------------------------------------------------  
 
 
-Input Data:
+Input Data:-----------------------------------------------------------
 
 The script can process molecules from two sources:
 
@@ -31,11 +31,15 @@ Run the Script: Navigate to the directory containing the script and run it using
   python FSMILES_representation.py
 
 When prompted, enter the path to your SDF file or a PubChem CID of your molecule.
+----------------------------------------------------------------------
 
-Output: The script will generate a file named Fsmile.txt containing the modified FSMILES representation of your molecule.
 
+Output: --------------------------------------------------------------
 
-What the Code Does:
+The script will generate a file named Fsmile.txt containing the modified FSMILES representation of your molecule.
+----------------------------------------------------------------------
+
+What the Code Does:---------------------------------------------------
 
 Reads Molecules: From SDF files or via PubChem CIDs, converting them to RDKit molecule objects.
 Identifies Cuttable Bonds: Finds bonds in the molecule that can be cut based on specific criteria (not in rings, not hydrogen atoms, etc.).
@@ -44,5 +48,5 @@ Constructs a Connectivity Graph: Builds a graph representing the connectivity of
 Performs DFS Traversal: Traverses the graph using Depth-First Search (DFS) starting from a root atom to maintain the structural integrity of the molecule in the SMILES representation.
 Reconstructs the modified SMILE: Creates a modified SMILES string (FSMILES) based on the traversal, annotating cycle sizes for each atom.
 Outputs Modified SMILES String: Saves the  FSMILES string to Fsmile.txt.
-
+-----------------------------------------------------------------------
 
