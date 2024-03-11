@@ -42,7 +42,7 @@ When prompted, enter the path to your SDF file or a PubChem CID of your molecule
 
 Output:
 -
-The script will generate a file named Fsmile.txt containing the modified FSMILES representation of your molecule.
+The script will generate a file named Fsmile.txt containing the FSMILES representation of your molecule.
 
 
 What the Code Does:
