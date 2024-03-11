@@ -48,12 +48,14 @@ The script will generate a file named Fsmile.txt containing the modified FSMILES
 What the Code Does:
 -
 
-Reads Molecules: From SDF files or via PubChem CIDs, converting them to RDKit molecule objects.
-Identifies Cuttable Bonds: Finds bonds in the molecule that can be cut based on specific criteria (not in rings, not hydrogen atoms, etc.).
-Fragments Molecules: Fragments the molecule at the identified cuttable bonds, replacing them with dummy atoms to indicate points of fragmentation.
-Constructs a Connectivity Graph: Builds a graph representing the connectivity of the fragments.
-Performs DFS Traversal: Traverses the graph using Depth-First Search (DFS) starting from a root atom to maintain the structural integrity of the molecule in the SMILES representation.
-Reconstructs the modified SMILE: Creates a modified SMILES string (FSMILES) based on the traversal, annotating cycle sizes for each atom.
-Outputs Modified SMILES String: Saves the  FSMILES string to Fsmile.txt.
+- Reads Molecules: From SDF files or via PubChem CIDs, converting them to RDKit molecule objects.
+
+- Identifies Cuttable Bonds: Finds bonds in the molecule that can be cut based on specific criteria (not in rings, not hydrogen atoms, etc.).
+
+- Fragments Molecules: Fragments the molecule at the identified cuttable bonds, replacing them with dummy atoms to indicate points of fragmentation.
+- Constructs a Connectivity Graph: Builds a graph representing the connectivity of the fragments.
+- Performs DFS Traversal: Traverses the graph using Depth-First Search (DFS) starting from a root atom to maintain the structural integrity of the molecule in the SMILES representation.
+- Reconstructs the modified SMILE: Creates a modified SMILES string (FSMILES) based on the traversal, annotating cycle sizes for each atom.
+- Outputs Modified SMILES String: Saves the  FSMILES string to Fsmile.txt.
 
 
