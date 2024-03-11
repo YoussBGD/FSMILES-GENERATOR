@@ -11,8 +11,11 @@ To use this tool, you'll need to install several Python packages related to chem
 Ensure you have Python 3.x installed on your system before proceeding. The required packages are:
 
 RDKit: A collection of cheminformatics and machine learning tools.
+
 NetworkX: A package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.
+
 Requests: A simple HTTP library for Python.
+
 Requests-cache: A transparent persistent cache for the Requests library.
 
 You can install these dependencies using pip  by running the following commands in your terminal:
