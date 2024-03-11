@@ -1,7 +1,7 @@
 Introduction:
 -
 
-This Python script reads 3D molecular structures either from local SDF files or directly via PubChem CID, and give its FSMILES representation.
+This Python script reads 3D molecular structures either from local SDF files or directly via PubChem CID, and gives its FSMILES representation.
 
 
 
