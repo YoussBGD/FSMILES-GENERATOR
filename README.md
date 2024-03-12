@@ -7,8 +7,7 @@ This Python script reads 3D molecular structures either from local SDF files or 
 
 Dependencies:
 -
-To use this tool, you'll need to install several Python packages related to cheminformatics and graph operations. 
-Ensure you have Python 3.x installed on your system before proceeding. The required packages are:
+The required packages are:
 
   - RDKit: A collection of cheminformatics and machine learning tools.
 
@@ -19,7 +18,7 @@ Ensure you have Python 3.x installed on your system before proceeding. The requi
   - Requests-cache: A transparent persistent cache for the Requests library.
 
 You can install these dependencies using pip  by running the following commands in your terminal:
-  pip install rdkit networkx matplotlib requests requests-cache
+  pip install rdkit networkx requests requests-cache
  
 
 
@@ -34,7 +33,7 @@ Run the Script:
 -
 Navigate to the directory containing the script and run it using Python:
 
-  python FSMILES_representation.py "input sdf file or CID" "output.txt"
+  python FSMILES_representation.py "input sdf file or pubchem CID" "output_file.txt"
 
 
 
