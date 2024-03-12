@@ -56,6 +56,6 @@ What the Code Does:
 - Constructs a Connectivity Graph: Builds a graph representing the connectivity of the fragments.
 - Performs DFS Traversal: Traverses the graph using Depth-First Search (DFS) starting from a root atom to maintain the structural integrity of the molecule in the SMILES representation.
 - Reconstructs the modified SMILE: Creates a modified SMILES string (FSMILES) based on the traversal, annotating cycle sizes for each atom.
-- Outputs Modified SMILES String: Saves the  FSMILES string to Fsmile.txt.
+- Outputs Modified SMILES String: Saves the  FSMILES string to Fsmiles.txt.
 
 
