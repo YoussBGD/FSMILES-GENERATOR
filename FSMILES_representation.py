@@ -422,10 +422,10 @@ def main(sdf_path):
     cleaned_elements, fragments_info = prepare_smile_to_fsmile(sdf_path)
     Fsmile = annotate_with_cycle_size(cleaned_elements, fragments_info)
     
-    with open("Fsmile.txt","w") as output:
+    with open("Fsmiles.txt","w") as output:
         output.write("Fsmile representation for molecule : {} \n\n ".format(sdf_path))
         output.write(Fsmile)
-    print("\n\n\nFinish processing, find the Fsmile representation of your molecule in the file Fsmile.txt")
+    print("\n\n\nFinish processing, find the FSMILES representation of your molecule in the file Fsmiles.txt")
     
 #-----------------------------------End_fuctions--------------------------------------------    
 
