@@ -7,7 +7,7 @@ from IPython.display import SVG
 import re
 import requests
 import requests_cache
-
+import sys
 # Enable caching for requests to reduce the number of network calls for repeated molecules
 requests_cache.install_cache('pubchem_cache', expire_after=86400)
 
@@ -418,20 +418,22 @@ def prepare_smile_to_fsmile(sdf_path):
 
 
 
-def main(sdf_path):  
+def main(sdf_path, output_file):
     cleaned_elements, fragments_info = prepare_smile_to_fsmile(sdf_path)
     Fsmile = annotate_with_cycle_size(cleaned_elements, fragments_info)
-    
-    with open("Fsmiles.txt","w") as output:
-        output.write("Fsmile representation for molecule : {} \n\n ".format(sdf_path))
+   
+    with open(output_file, "w") as output:
+        output.write("Fsmile representation for molecule : {} \n\n".format(sdf_path))
         output.write(Fsmile)
-    print("\n\n\nFinish processing, find the FSMILES representation of your molecule in the file Fsmiles.txt")
-    
+    print("\n\n\nFinish processing, find the FSMILES representation of your molecule in the file {}".format(output_file))
+
 #-----------------------------------End_fuctions--------------------------------------------    
 
 if __name__ == "__main__":
-
-    sdf_path = input("Please enter the path to your SDF file (e.g., 'toto/Conformer3D_COMPOUND_CID_5215.sdf') or a PubChem CID of your molecule: ")
-    main(sdf_path.strip())
-
-    
+    if len(sys.argv) != 3:
+        print("Usage: python code.py <input_path> <output_file>")
+        sys.exit(1)
+   
+    input_path = sys.argv[1]
+    output_file = sys.argv[2]
+    main(input_path.strip(), output_file.strip())
