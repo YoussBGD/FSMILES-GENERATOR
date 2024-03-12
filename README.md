@@ -34,15 +34,13 @@ Run the Script:
 -
 Navigate to the directory containing the script and run it using Python:
 
-  python FSMILES_representation.py
-
-When prompted, enter the path to your SDF file or a PubChem CID of your molecule.
+  python FSMILES_representation.py "input sdf file or CID" "output.txt"
 
 
 
 Output:
 -
-The script will generate a file named Fsmile.txt containing the FSMILES representation of your molecule.
+The script will generate a .txt file  containing the FSMILES representation of your molecule.
 
 
 What the Code Does:
@@ -56,6 +54,6 @@ What the Code Does:
 - Constructs a Connectivity Graph: Builds a graph representing the connectivity of the fragments.
 - Performs DFS Traversal: Traverses the graph using Depth-First Search (DFS) starting from a root atom to maintain the structural integrity of the molecule in the SMILES representation.
 - Reconstructs the modified SMILE: Creates a modified SMILES string (FSMILES) based on the traversal, annotating cycle sizes for each atom.
-- Outputs Modified SMILES String: Saves the  FSMILES string to Fsmiles.txt.
+- Outputs Modified SMILES String: Saves the  FSMILES string to your output.txt file.
 
 
